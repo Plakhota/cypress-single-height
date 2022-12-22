@@ -29,7 +29,13 @@ module.exports = {
         {width: 1024, height: 768, name: 'safari'},
         
         {width: 300, height: 600, name: 'chrome'},
+      
         {width: 400, height: 600, name: 'chrome'},
+        {width: 400, height: 700, name: 'chrome'},
+        {width: 400, height: 800, name: 'chrome'},
+        {width: 400, height: 900, name: 'chrome'},
+        {width: 400, height: 1000, name: 'chrome'},
+
         
                 {width: 500, height: 600, name: 'chrome'},
                 {width: 600, height: 600, name: 'chrome'},
