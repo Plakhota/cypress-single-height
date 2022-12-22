@@ -5,6 +5,7 @@
 
 // This "describe" method contains related test cases with per-test setup and cleanup.
 // In this example, there is only one test.
+const address = 'https://demo.applitools.com'
 describe('ACME Bank', () => {
 
     // This method performs setup before each test.
@@ -33,7 +34,7 @@ describe('ACME Bank', () => {
         })
 
         // Load the login page.
-        cy.visit('https://demo.applitools.com')
+        cy.visit(address)
         cy.viewport(500, 800)
 
         // Verify the full login page loaded correctly.
@@ -59,7 +60,7 @@ describe('ACME Bank', () => {
         })
 
         // Load the login page.
-        cy.visit('https://demo.applitools.com')
+        cy.visit(address)
         cy.viewport(500, 700)
 
         // Verify the full login page loaded correctly.
@@ -84,7 +85,7 @@ describe('ACME Bank', () => {
         })
 
         // Load the login page.
-        cy.visit('https://demo.applitools.com')
+        cy.visit(address)
         cy.viewport(500, 900)
 
         // Verify the full login page loaded correctly.
@@ -109,7 +110,7 @@ describe('ACME Bank', () => {
         })
 
         // Load the login page.
-        cy.visit('https://demo.applitools.com')
+        cy.visit(address)
         cy.viewport(500, 1000)
 
         // Verify the full login page loaded correctly.
