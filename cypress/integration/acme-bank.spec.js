@@ -23,7 +23,7 @@ describe('ACME Bank', () => {
     // but the verifications use one-line snapshot calls with Applitools Eyes.
     // If the page ever changes, then Applitools will detect the changes and highlight them in the dashboard.
     // Traditional assertions that scrape the page for text values are not needed here.
-    it('should log into a bank account', () => {
+    it('should log into a bank account height 800', () => {
         
          // Open Eyes to start visual testing.
         // Each test should open its own Eyes for its own snapshots.
@@ -49,7 +49,7 @@ describe('ACME Bank', () => {
     })
     
     
-    it('should log into a bank account', () => {
+    it('should log into a bank account height 700', () => {
         
          // Open Eyes to start visual testing.
         // Each test should open its own Eyes for its own snapshots.
@@ -74,7 +74,7 @@ describe('ACME Bank', () => {
        
     })
     
-    it('should log into a bank account', () => {
+    it('should log into a bank account height 900', () => {
         
          // Open Eyes to start visual testing.
         // Each test should open its own Eyes for its own snapshots.
@@ -99,7 +99,7 @@ describe('ACME Bank', () => {
        
     })
     
-    it('should log into a bank account', () => {
+    it('should log into a bank account height 1000', () => {
         
          // Open Eyes to start visual testing.
         // Each test should open its own Eyes for its own snapshots.
