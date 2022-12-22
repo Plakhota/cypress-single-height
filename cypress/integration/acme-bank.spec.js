@@ -24,9 +24,17 @@ describe('ACME Bank', () => {
     // If the page ever changes, then Applitools will detect the changes and highlight them in the dashboard.
     // Traditional assertions that scrape the page for text values are not needed here.
     it('should log into a bank account', () => {
+        
+         // Open Eyes to start visual testing.
+        // Each test should open its own Eyes for its own snapshots.
+        cy.eyesOpen({
+            appName: 'ACME Bank',                       // The name of the app under test
+            testName: Cypress.currentTest.title,        // The name of the test case
+        })
 
         // Load the login page.
         cy.visit('https://demo.applitools.com')
+        cy.viewport(500, 800)
 
         // Verify the full login page loaded correctly.
         cy.eyesCheckWindow({
@@ -34,26 +42,92 @@ describe('ACME Bank', () => {
             target: 'window',
             fully: true
         });
+        
+         cy.eyesClose()
 
-        // Perform login.
-        cy.get('#username').type('andy')
-        cy.get('#password').type('i<3pandas')
-        cy.get('#log-in').click()
+       
+    })
+    
+    
+    it('should log into a bank account', () => {
+        
+         // Open Eyes to start visual testing.
+        // Each test should open its own Eyes for its own snapshots.
+        cy.eyesOpen({
+            appName: 'ACME Bank',                       // The name of the app under test
+            testName: Cypress.currentTest.title,        // The name of the test case
+        })
 
-        // Verify the full main page loaded correctly.
-        // This snapshot uses LAYOUT match level to avoid differences in closing time text.
+        // Load the login page.
+        cy.visit('https://demo.applitools.com')
+        cy.viewport(500, 700)
+
+        // Verify the full login page loaded correctly.
         cy.eyesCheckWindow({
-            tag: "Main page",
+            tag: "Login page",
             target: 'window',
-            fully: true,
-            matchLevel: 'Layout'
+            fully: true
         });
+        
+         cy.eyesClose()
+
+       
+    })
+    
+    it('should log into a bank account', () => {
+        
+         // Open Eyes to start visual testing.
+        // Each test should open its own Eyes for its own snapshots.
+        cy.eyesOpen({
+            appName: 'ACME Bank',                       // The name of the app under test
+            testName: Cypress.currentTest.title,        // The name of the test case
+        })
+
+        // Load the login page.
+        cy.visit('https://demo.applitools.com')
+        cy.viewport(500, 900)
+
+        // Verify the full login page loaded correctly.
+        cy.eyesCheckWindow({
+            tag: "Login page",
+            target: 'window',
+            fully: true
+        });
+        
+         cy.eyesClose()
+
+       
+    })
+    
+    it('should log into a bank account', () => {
+        
+         // Open Eyes to start visual testing.
+        // Each test should open its own Eyes for its own snapshots.
+        cy.eyesOpen({
+            appName: 'ACME Bank',                       // The name of the app under test
+            testName: Cypress.currentTest.title,        // The name of the test case
+        })
+
+        // Load the login page.
+        cy.visit('https://demo.applitools.com')
+        cy.viewport(500, 1000)
+
+        // Verify the full login page loaded correctly.
+        cy.eyesCheckWindow({
+            tag: "Login page",
+            target: 'window',
+            fully: true
+        });
+        
+         cy.eyesClose()
+
+       
     })
 
     // This method performs cleanup after each test.
     afterEach(() => {
         
         // Close Eyes to tell the server it should display the results.
-        cy.eyesClose()
+       
     })
 })
