@@ -5,8 +5,10 @@
 
 // This "describe" method contains related test cases with per-test setup and cleanup.
 // In this example, there is only one test.
-const address = 'https://demo.applitools.com'
-describe('ACME Bank', () => {
+const address = 'https://www.victorinox.com/uk/en/Damast-Limited-Edition/cms/sak-limited-edition-damast';
+const isfully = false;
+
+describe('Check app that is repsonsive to height', () => {
 
     // This method performs setup before each test.
     beforeEach(() => {
@@ -15,112 +17,141 @@ describe('ACME Bank', () => {
         // Each test should open its own Eyes for its own snapshots.
         cy.eyesOpen({
             appName: 'ACME Bank',                       // The name of the app under test
-            testName: Cypress.currentTest.title,        // The name of the test case
-        })
+            testName: Cypress.currentTest.title, 
+                   
+        });
+
+        
+
+        cy.visit(address)
+
+        cy.get('#onetrust-pc-btn-handler').click()
+
+
+
     })
 
-    // This test covers login for the Applitools demo site, which is a dummy banking app.
-    // The interactions use typical Cypress calls,
-    // but the verifications use one-line snapshot calls with Applitools Eyes.
-    // If the page ever changes, then Applitools will detect the changes and highlight them in the dashboard.
-    // Traditional assertions that scrape the page for text values are not needed here.
-    it('should log into a bank account height 800', () => {
+    it('DOM taken with height 100', () => {
         
-         // Open Eyes to start visual testing.
-        // Each test should open its own Eyes for its own snapshots.
-        cy.eyesOpen({
-            appName: 'ACME Bank',                       // The name of the app under test
-            testName: Cypress.currentTest.title,        // The name of the test case
-        })
-
-        // Load the login page.
-        cy.visit(address)
-        cy.viewport(500, 800)
+       
+        cy.viewport(500, 100)
 
         // Verify the full login page loaded correctly.
         cy.eyesCheckWindow({
             tag: "Login page",
             target: 'window',
-            fully: true
+            fully: isfully
         });
         
-         cy.eyesClose()
-
        
     })
-    
-    
-    it('should log into a bank account height 700', () => {
-        
-         // Open Eyes to start visual testing.
-        // Each test should open its own Eyes for its own snapshots.
-        cy.eyesOpen({
-            appName: 'ACME Bank',                       // The name of the app under test
-            testName: Cypress.currentTest.title,        // The name of the test case
-        })
 
-        // Load the login page.
-        cy.visit(address)
+    it('DOM taken with height 200', () => {
+        
+       
+        cy.viewport(500, 200)
+
+        // Verify the full login page loaded correctly.
+        cy.eyesCheckWindow({
+            tag: "Login page",
+            target: 'window',
+            fully: isfully
+        });
+        
+       
+    })
+
+    it('DOM taken with height 500', () => {
+        
+       
+        cy.viewport(500, 500)
+
+        // Verify the full login page loaded correctly.
+        cy.eyesCheckWindow({
+            tag: "Login page",
+            target: 'window',
+            fully: isfully
+        });
+        
+       
+    })
+
+    it('DOM taken with height 600', () => {
+        
+       
+        cy.viewport(500, 600)
+
+        // Verify the full login page loaded correctly.
+        cy.eyesCheckWindow({
+            tag: "Login page",
+            target: 'window',
+            fully: isfully
+        });
+        
+       
+    })
+
+    
+    it('DOM taken with height 700', () => {
+        
+       
         cy.viewport(500, 700)
 
         // Verify the full login page loaded correctly.
         cy.eyesCheckWindow({
             tag: "Login page",
             target: 'window',
-            fully: true
+            fully: isfully
         });
         
-         cy.eyesClose()
-
        
     })
-    
-    it('should log into a bank account height 900', () => {
-        
-         // Open Eyes to start visual testing.
-        // Each test should open its own Eyes for its own snapshots.
-        cy.eyesOpen({
-            appName: 'ACME Bank',                       // The name of the app under test
-            testName: Cypress.currentTest.title,        // The name of the test case
-        })
 
-        // Load the login page.
-        cy.visit(address)
+    it('DOM taken with height 800', () => {
+        
+        // Open Eyes to start visual testing.
+       // Each test should open its own Eyes for its own snapshots.
+     
+       cy.viewport(500, 800)
+
+       // Verify the full login page loaded correctly.
+       cy.eyesCheckWindow({
+           tag: "Login page",
+           target: 'window',
+           fully: isfully
+       });
+       
+      
+   })
+   
+    
+    it('DOM taken with height 900', () => {
+        
+       
         cy.viewport(500, 900)
 
         // Verify the full login page loaded correctly.
         cy.eyesCheckWindow({
             tag: "Login page",
             target: 'window',
-            fully: true
+            fully: isfully
         });
         
-         cy.eyesClose()
-
        
     })
     
-    it('should log into a bank account height 1000', () => {
+    it('DOM taken with height 1000', () => {
         
-         // Open Eyes to start visual testing.
-        // Each test should open its own Eyes for its own snapshots.
-        cy.eyesOpen({
-            appName: 'ACME Bank',                       // The name of the app under test
-            testName: Cypress.currentTest.title,        // The name of the test case
-        })
-
-        // Load the login page.
-        cy.visit(address)
+       
         cy.viewport(500, 1000)
 
         // Verify the full login page loaded correctly.
         cy.eyesCheckWindow({
             tag: "Login page",
             target: 'window',
-            fully: true
+            fully: isfully
         });
         
-         cy.eyesClose()
 
        
     })
@@ -129,6 +160,8 @@ describe('ACME Bank', () => {
     afterEach(() => {
         
         // Close Eyes to tell the server it should display the results.
+        cy.eyesClose()
+
        
     })
 })

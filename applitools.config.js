@@ -5,7 +5,9 @@ module.exports = {
 
     // Concurrency refers to the number of visual checkpoints Applitools will perform in parallel.
     // Warning: If you have a free account, then concurrency will be limited to 1.
-    testConcurrency: 5,
+    testConcurrency: 60,
+    layoutBreakpoints: true,
+    waitBeforeCapture: 3000,
 
     // To connect visual test results to your account,
     // you must set the `APPLITOOLS_API_KEY` environment variable to your Applitools API key.
@@ -16,38 +18,34 @@ module.exports = {
     
     // A batch is the collection of visual checkpoints for a test suite.
     // Batches are displayed in the dashboard, so use meaningful names.
-    batchName: 'Example: Cypress 9 in JavaScript with the Ultrafast Grid',
+    batchName: 'Height-responsive app',
 
     // Applitools can run checkpoints for snapshots against any browser in the Ultrafast Grid.
     // This setting defines 5 unique browser configurations to test.
+
     browser: [
 
         // Add 3 desktop browsers with different viewports for cross-browser testing in the Ultrafast Grid.
         // Other browsers are also available, like Edge and IE.
-        {width: 800, height: 600, name: 'chrome'},
-        {width: 1600, height: 1200, name: 'firefox'},
-        {width: 1024, height: 768, name: 'safari'},
+        // {width: 800, height: 100, name: 'chrome'},
+        // {width: 800, height: 200, name: 'chrome'},
+        // {width: 800, height: 300, name: 'chrome'},
+        // {width: 800, height: 400, name: 'chrome'},
+        // {width: 800, height: 500, name: 'chrome'},
+        // {width: 800, height: 600, name: 'chrome'},
+        {width: 800, height: 700, name: 'chrome'},
+        // {width: 800, height: 800, name: 'chrome'},
+        // {width: 800, height: 900, name: 'chrome'},
+        // {width: 800, height: 1000, name: 'chrome'},
+        // {width: 800, height: 1100, name: 'chrome'},
         
-        {width: 300, height: 600, name: 'chrome'},
       
-        {width: 400, height: 600, name: 'chrome'},
-        {width: 400, height: 700, name: 'chrome'},
-        {width: 400, height: 800, name: 'chrome'},
-        {width: 400, height: 900, name: 'chrome'},
-        {width: 400, height: 1000, name: 'chrome'},
-
-        
-                {width: 500, height: 600, name: 'chrome'},
-                {width: 600, height: 600, name: 'chrome'},
-
-
-
-        {width: 1600, height: 1200, name: 'firefox'},
-        {width: 1024, height: 768, name: 'safari'},
-
-        // Add 2 mobile emulation devices with different orientations for cross-browser testing in the Ultrafast Grid.
-        // Other mobile devices are available, including iOS.
-        {deviceName: 'Pixel 2', screenOrientation: 'portrait'},
-        {deviceName: 'Nexus 10', screenOrientation: 'landscape'},
-    ]
+        // {width: 500, height: 600, name: 'chrome'},
+        // {width: 500, height: 700, name: 'chrome'},
+        // {width: 500, height: 800, name: 'chrome'},
+        // {width: 500, height: 900, name: 'chrome'},
+        // {width: 500, height: 1000, name: 'chrome'},
+        // {width: 500, height: 1100, name: 'chrome'},
+    ],        
+     
 }
